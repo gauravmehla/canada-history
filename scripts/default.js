@@ -1,7 +1,10 @@
 let activePage = (href) => {
+    // reset previous selected
     for(let el of document.querySelector("nav").children) {
         el.classList = "";
     }
+
+    // Update new selected
     if(document.getElementById(`a-${href}`)) {
         document.getElementById(`a-${href}`).classList.add("hoverItem");
     }
