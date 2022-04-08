@@ -51,6 +51,10 @@ nav a {
     transition: 0.2s;
 }
 
+nav a:hover {
+    border-bottom: 2px solid black;
+}
+
 .hoverItem {
     background: black;
     color: white;
@@ -91,6 +95,17 @@ a:hover{
 .block h1 {
     margin: 10px 0px 10px 0px;
     padding: 10px 0px 10px 0px;
+    display: flex;
+    align-items: baseline;
+}
+
+.block h1 #h-tag{
+    color: #e1e0e0;
+    font-size: 60px;
+}
+
+.block h1 #h-title {
+    margin-left: -30px;
 }
 
 .block p {
