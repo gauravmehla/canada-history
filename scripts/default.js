@@ -51,6 +51,9 @@ let submit = () => {
     document.getElementById("fname").value = '';
     document.getElementById("lname").value = '';
     document.getElementById("say").value = '';
+
+    // Return back to home page
+    loadPage('history');
     return true;
 }
 
