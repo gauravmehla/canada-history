@@ -1,3 +1,12 @@
+let activePage = (href) => {
+    for(let el of document.querySelector("nav").children) {
+        el.classList = "";
+    }
+    if(document.getElementById(`a-${href}`)) {
+        document.getElementById(`a-${href}`).classList.add("hoverItem");
+    }
+}
+
 // Load page after click
 let loadPage = (href) => {
     // Scroll to the top
@@ -10,19 +19,17 @@ let loadPage = (href) => {
 
     // Update the DOM
     document.getElementById('content').innerHTML = xmlhttp.responseText;
-}
 
-window.onload = () => {
-    // Default page to load
-    loadPage('history');
+    // Highlight link
+    activePage(href);
 }
 
 let submit = () => {
     let fname = document.getElementById("fname").value;
     let lname = document.getElementById("lname").value;
-    let country = document.getElementById("country").value;
     let say = document.getElementById("say").value;
 
+    // validate entry
     if(!fname) {
         document.getElementById("fname").focus();
         return false;
@@ -34,6 +41,17 @@ let submit = () => {
         return false;
     }
 
+    // alert the user
     alert(`Hey ${fname} ${lname}, Thanks for filling the form. We will get back to you soon. Have a good day.`);
+
+    // Reset the values
+    document.getElementById("fname").value = '';
+    document.getElementById("lname").value = '';
+    document.getElementById("say").value = '';
     return true;
+}
+
+window.onload = () => {
+    // Default page to load
+    loadPage('history');
 }

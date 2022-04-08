@@ -48,12 +48,12 @@ nav a {
     margin: 10px;
     text-align: center;
     margin: auto;
+    transition: 0.2s;
 }
 
-nav a:hover {
+.hoverItem {
     background: black;
     color: white;
-    transition: 0.2s;
 }
 
 a:hover{
