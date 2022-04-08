@@ -1,0 +1,47 @@
+
+/* Hide the sidebar if width of the screen is < 700px */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 3fr 50px;
+    }
+
+    .main {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        max-height: 80vh;
+    }
+
+    #logo {
+        margin: 0px 100px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav {
+        text-align: center;
+        flex-direction: row;
+    }
+
+    nav a {
+        display: inline;
+    }
+
+    .sidebar {
+        box-shadow: 0px -13px 25px black;
+    }
+}
+
+/* Hide the sidebar if width of the screen is < 480px */
+@media (max-width: 480px) {
+
+    nav {
+        flex-direction: column;
+    }
+    
+    nav a {
+        display: block;
+    }
+}
