@@ -3,6 +3,11 @@ Final project on topic "History of Canada" using basic HTML, CSS and JavaScript.
 
 Live: [mehla.in/canada-history](https://mehla.in/canada-history/)
 
+## How to run this website?
+There are two ways to check this website. 
+1. [Live Server VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+2. [mehla.in/canada-history](https://mehla.in/canada-history)
+
 ## Technologies used
 - Basic HTML
 - Basic CSS

@@ -145,6 +145,27 @@ footer a:hover {
     padding: 5px;;
 }
 
+#error-404 {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    line-height: 50px;
+    height: 100vh;
+    font-size: 20px;
+}
+
+#error-404 img {
+    margin: 50px;
+}
+
+#small {
+    font-size: 14px;
+}
+
 /* Form */
 input[type=text], select, textarea {
     width: 100%;

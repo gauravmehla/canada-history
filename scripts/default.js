@@ -15,16 +15,34 @@ let loadPage = (href) => {
     // Scroll to the top
     document.getElementById('content').scroll({top:0,behavior:'smooth'});
 
-    // Make a request to get the data from the pages
-    let xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", `${href}.html`, false);
-    xmlhttp.send();
+    try {
+        // Make a request to get the data from the pages
+        let xmlhttp = new XMLHttpRequest();
 
-    // Update the DOM
-    document.getElementById('content').innerHTML = xmlhttp.responseText;
+        xmlhttp.open("GET", `${href}.html`, false);
+        xmlhttp.send();
 
-    // Highlight link
-    activePage(href);
+        // Update the DOM
+        document.getElementById('content').innerHTML = xmlhttp.responseText;
+
+        // Highlight link
+        activePage(href);
+    } catch(e) {
+        console.log("Visit the website on https://mehla.in/canada-history");
+        document.getElementById('content').innerHTML = `<span id="error-404">
+
+                <img src="./images/404.png" width="120"/>
+
+                Please load the website using 
+                <b>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a>
+                </b> or visit <b>
+                    <a href="https://mehla.in/canada-history" target="_blank">mehla.in/canada-history</a>
+                </b> to view the website.
+
+                <span id="small"> Check <a href="README.md" target="_blank">ReadMe.md</a> for more details</span>
+            <span>`;
+    }
 }
 
 let submit = () => {

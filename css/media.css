@@ -36,6 +36,10 @@
     .block {
         margin-left: 20px;
     }
+
+    #error-404 {
+        height: 60vh;
+    }
 }
 
 /* Hide the sidebar if width of the screen is < 480px */
